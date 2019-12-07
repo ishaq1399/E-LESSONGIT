@@ -5,6 +5,7 @@
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="administrator/css/style_register.css">
 <link rel="shortcut icon" type="image/x-icon" href="images/logos.jpg">
+
 <!--[if lte IE 8]>
 <script type="text/javascript" src="js/html5.js"></script>
 <![endif]-->
@@ -141,10 +142,10 @@ function validasi(form){
 <header id="top">
 	<div class="container_12 clearfix">
 		<div id="logo" class="grid_12">
-			<!-- replace with your website title or logo -->
-			<a id="site-title">eLesson <span></span></a>			
-		</div>
-	</div>
+      <!-- replace with your website title or logo -->
+			<a id="site-title">eLesson<span></span></a>	
+    </div>	
+  </div>
 </header>
 
 <div id="login2" class="box">
@@ -206,9 +207,9 @@ function validasi(form){
                                 
 			</dl>
 			<p>
-				<input type="submit" class="button white" value="Daftar"></input>
+				<input type="submit" class="button blue" value="Daftar"></input>
                                 <?php
-                               echo "<button type='button' class='button white' onclick=\"window.location.href='index.php';\" > Batal</button>";
+                               echo "<button type='button' class='button red' onclick=\"window.location.href='index.php';\" > Batal</button>";
                                ?>
 			</p>
 		</form>

@@ -1,0 +1,18 @@
+ss.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="mappoint-class.html" class="corrected_url">mappoint</a></div></div></li>
+<li id="map.mapshape-class.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="mapshape-class.html" class="corrected_url">mapshape</a></div></div></li>
+</ul>
+</li>
+<li class="toc_collapsed"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper">Examples and How To</div></div><ul>
+<li id="map.extracting-and-joining-polygons-or-line-segments.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="../../map/extracting-and-joining-polygons-or-line-segments.html" class="corrected_url">Extracting and Joining Polygons or Line Segments</a></div></div></li>
+<li id="map.matching-line-segments.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="../../map/matching-line-segments.html" class="corrected_url">Matching Line Segments</a></div></div></li>
+<li id="map.geographic-interpolation-of-vectors.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="../../map/geographic-interpolation-of-vectors.html" class="corrected_url">Geographic Interpolation of Vectors</a></div></div></li>
+<li id="map.overlaying-polygons-with-set-logic.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="../../map/overlaying-polygons-with-set-logic.html" class="corrected_url">Overlaying Polygons with Set Logic</a></div></div></li>
+<li id="map.cutting-polygons-at-the-date-line.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="../../map/cutting-polygons-at-the-date-line.html" class="corrected_url">Cutting Polygons at the Date Line</a></div></div></li>
+<li id="map.building-buffer-zones.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="../../map/building-buffer-zones.html" class="corrected_url">Building Buffer Zones</a></div></div></li>
+<li id="map.trimming-vector-data-to-a-rectangular-region.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="../../map/trimming-vector-data-to-a-rectangular-region.html" class="corrected_url">Trimming Vector Data to a Rectangular Region</a></div></div></li>
+<li id="map.trimming-vector-data-to-an-arbitrary-region.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="../../map/trimming-vector-data-to-an-arbitrary-region.html" class="corrected_url">Trimming Vector Data to an Arbitrary Region</a></div></div></li>
+<li id="map.simplifying-vector-coordinate-data.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="../../map/simplifying-vector-coordinate-data.html" class="corrected_url">Simplifying Vector Coordinate Data</a></div></div></li>
+</ul>
+</li>
+<li class="toc_collapsed"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper">Concepts</div></div><ul>
+<li id="map.understanding-vector-geodata.html#f20-12353"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="../../map/understanding-vector-geodata.html#f20-12353" class="corrected_url">Segments Versus Polygons</a></div></div>

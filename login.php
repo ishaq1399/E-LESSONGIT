@@ -45,7 +45,10 @@ function validasi(form){
 <div class="login-border">
 <div class="login-style">
 	<div class="login-header">
-		<div class="logo clear">
+
+  <h1><p> <b> Sign In</b> </p></h1>
+    
+  <div class="logo clear">
 			<div align="right"><span class="title"></span></div>
 		</div>
 	</div>

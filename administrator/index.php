@@ -49,7 +49,7 @@ function validasi(form){
 	<div class="container_12 clearfix">
 		<div id="logo" class="grid_12">
 			<!-- replace with your website title or logo -->
-			<a id="site-title">eLesson<span>TAMAN AYO PINTAR</span></a>
+			<a id="site-title">eLesson<span> TAMAN AYO PINTAR</span></a>
 			<a id="view-site" href="../index.php">View Site</a>
 		</div>
 	</div>
@@ -70,8 +70,8 @@ function validasi(form){
 				<dd><input id="adminpassword" type="password" name="password"/></dd>
 			</dl>
 			<p>
-				<input type="submit" class="button white" value="Login"></input>
-        <input type="reset" class="button white" value="Reset"></input>
+				<input type="submit" class="button blue" value="Login"></input>
+        <input type="reset" class="button red" value="Reset"></input>
 			</p>
 		</form>
 	</section>

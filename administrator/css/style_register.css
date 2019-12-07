@@ -8,7 +8,7 @@ body {
 
 body {
     color: #444;
-    background: #eaeaea;
+    background: gold;
     font: 12px/1.8 Arial, sans-serif
 }
 
@@ -99,23 +99,27 @@ img.alignright {
 header#top {
     height: 50px;
     color: #ccc;
-    border-bottom: 1px solid #000;
-    background: #2c2c2c;
+    border-bottom: 1px solid rgb(72, 151, 204);
+    background: #ffffff;
     min-width: 960px
 }
 
 div#logo {
-    margin-top: 8px;
-    font-size: 18px
+    margin-top: 5px;
+    margin: 5px 0 px 2px;
+    font-size: 20px
 }
 
 header#top div#logo a {
     text-decoration: none;
-    color: #aaa
+    color: white
+    
+    
 }
 
 header#top div#logo a:hover {
     color: #ccc
+    
 }
 
 div#logo img {

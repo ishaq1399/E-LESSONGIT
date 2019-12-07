@@ -1,0 +1,87 @@
+rl">Writing WMS Images to a KML File</a></div></div></li>
+</ul>
+</li>
+<li class="toc_collapsed"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper">Concepts</div></div><ul>
+<li id="map.introduction-to-web-map-service.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="../../map/introduction-to-web-map-service.html" class="corrected_url">Introduction to Web Map Service</a></div></div></li>
+<li id="map.hosting-your-own-wms-server.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="../../map/hosting-your-own-wms-server.html" class="corrected_url">Hosting Your Own WMS Server</a></div></div></li>
+<li id="map.common-problems-with-wms-servers.html"><div class="node_element"><div class="wrapper img_wrapper"></div><div class="wrapper text_wrapper"><a href="../../map/common-problems-with-wms-servers.html" class="corrected_url">Common Problems with WMS Servers</a></div></div></li>
+</ul>
+</li>
+</ul>
+</li><li id="map.web-map-display.html.1" class="toc_collapsed">
+<div class="node_element">
+<div class="wrapper img_wrapper"></div>
+<div class="wrapper text_wrapper"><a href="../web-map-display.html" class="corrected_url">Web Map Display</a></div>
+</div>
+</li></ul>
+</li><li id="map.map-display.html.4" class="toc_collapsed">
+<div class="node_element">
+<div class="wrapper img_wrapper"></div>
+<div class="wrapper text_wrapper"><a href="../map-display.html" class="corrected_url">Map Display</a></div>
+</div>
+</li><li id="map.data-analysis-and-transformation.html.5" class="toc_collapsed">
+<div class="node_element">
+<div class="wrapper img_wrapper"></div>
+<div class="wrapper text_wrapper"><a href="../data-analysis-and-transformation.html" class="corrected_url">Data Analysis</a></div>
+</div>
+</li><li id="map.coordinates-geodesy-and-projections.html.6" class="toc_collapsed">
+<div class="node_element">
+<div class="wrapper img_wrapper"></div>
+<div class="wrapper text_wrapper"><a href="../coordinates-geodesy-and-projections.html" class="corrected_url">Coordinates, Geodesy, and Projections</a></div>
+</div>
+</li></ul>
+</li>
+</ul>
+<!--END OF TOC DATA-->
+</div><!--close_toc_container-->
+</div><!--close_toc_scroll_pane-->
+</div><!--close_toc_container_wrapper-->
+</div>
+</div><!--close_toc_pane-->
+                <div class="page_container">
+                   <div class="content_frame">
+                      <div class="content_container" id="content_container">
+                
+<div id="search_crumb_container"><div class="docsearch_container">
+<form id="docsearch_form" name="docsearch_form" method="get" action="../../templates/searchresults.html">
+<label for="docsearch" class="hidden">Search MATLAB Documentation</label>
+<input type="text" name="qdoc" id="docsearch" class="textfield" tabindex="0" autocomplete="off" value="Search Documentation">
+<input type="submit" name="submitsearch" id="submitsearch" value="Search" class="docsearch_submit">
+<script type="text/javascript">
+         $("input[name='qdoc']").toggleVal({
+            focusClass: "hasFocus"
+         });
+       </script>
+</form>
+</div>
+<div class="breadcrumb_container">
+<div class="breadcrumbs"><ul><li itemscope="" itemtype="http://www.data-vocabulary.org/Breadcrumb" itemprop="breadcrumb" class="breadcrumb_first"><a href="../../documentation-center.html" itemprop="url"><span itemprop="title">R2015a</span></a></li><li itemscope="" itemtype="http://www.data-vocabulary.org/Breadcrumb" itemprop="breadcrumb" class="breadcrumb_product"><a href="../index.html" itemprop="url"><span itemprop="title">Mapping Toolbox</span></a></li><li itemscope="" itemtype="http://www.data-vocabulary.org/Breadcrumb" itemprop="breadcrumb"><a href="../web-map-service.html" itemprop="url"><span itemprop="title">Web Maps</span></a></li><li itemscope="" itemtype="http://www.data-vocabulary.org/Breadcrumb" itemprop="breadcrumb" class="breadcrumb_last"><a href="../web-map-service-1.html" itemprop="url"><span itemprop="title">Web Map Service</span></a></li>
+</ul>
+</div>
+</div>
+
+</div><section id="doc_center_content"><div class="function_ref"><div id="br7shpt"></div><div itemprop="content"><h1 class="r2015a" itemprop="title">wmsupdate</h1><!-- SYNCHTO: _rfrncsct1.html --><div class="doc_topic_desc"><div class="purpose_container"><p itemprop="purpose">Synchronize WMSLayer object with server</p></div></div></div>
+<div class="ref_sect"><h2 id="syntax">Syntax</h2><div class="syntax_signature"><p class="synopsis"><code>[updatedLayers,index]
+= wmsupdate(layers)<br>[...] = wmsupdate(layers,Name,Value,
+...)<br></code></p></div></div><div class="clear"></div><div itemprop="content" class="ref_sect"><div id="br7shqb-2"></div><h2>Description</h2><p><span itemprop="syntax"><code>[<a href="#outputarg_updatedLayers" class="intrnllnk"><code>updatedLayers</code></a>,<a href="#outputarg_index" class="intrnllnk"><code>index</code></a>]
+= wmsupdate(<a href="#inputarg_layers" class="intrnllnk"><code>layers</code></a>)</code></span> returns a <code>WMSLayer</code> array
+with its properties synchronized with values from the server. The
+input <code>layers</code> contains only one unique <code>ServerURL</code>.
+Layers no longer available on the server are removed. The logical
+array <code>index</code> contains <code>true</code> for
+each available layer. Therefore, <code>updatedLayers</code> has
+the same size as <code>layers(index)</code>. Except for deletion, <code>updatedLayers</code> preserves
+the same order of layers as <code>layers</code>.</p><p><span itemprop="syntax"><code>[...] = wmsupdate(<a href="#inputarg_layers" class="intrnllnk"><code>layers</code></a>,<a href="#namevaluepairarguments" class="intrnllnk"><code>Name,Value</code></a>,
+...)</code></span> specifies parameter-value pairs that modify the request.
+Parameter names can be abbreviated and are case-insensitive.</p><p>The function accesses the Internet to update the properties.
+Periodically, the WMS server is unavailable. Updating the layer can
+take several minutes. The function times-out after 60 seconds if a
+connection is not made to the server.</p></div><div itemprop="content"></div><div itemprop="content" class="ref_sect"><div id="br9ow3c-1"></div><h2 id="inputs">Input Arguments</h2><table cellpadding="4" cellspacing="0" width="100%"><tbody><tr valign="top"><td class="firstargumentlistentrycell" width="150"><div class="clearfix" id="inputarg_layers"></div><p><code>layers</code></p></td><td class="firstargumentlistentrycell">
+<p>Array of <code>WMSLayer</code> objects</p>
+</td></tr></tbody></table><div class="clearfix" id="namevaluepairarguments"></div><h3 id="namevaluepairs" class="bottom_ruled">Name-Value Pair Arguments</h3><div id="bs2nnbm"></div><div class="namevaluecontainer"><p>Specify optional comma-separated pairs of <code>Name,Value</code> arguments.
+<code>Name</code> is the argument
+name and <code>Value</code> is the corresponding
+value. <code>Name</code> must appear
+inside single quotes (<code>' '</code>).
+You can specify several name and value pair
+arguments in any order as <code>Name1,Value1,...,NameN,ValueN</code>.</p></div><table cellpadding="4" cellspacing="0" width="100%"><tbody><tr valign="top"><td class="firstargumentlistentrycell" width="150"><div class="clearfix" id="inputarg_TimeoutInSeconds"></div><p><code>'TimeoutInSeconds'</code></p></td><td class=

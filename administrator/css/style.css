@@ -8,7 +8,7 @@ body {
 
 body {
     color: #444;
-    background: #eaeaea;
+    background: white;
     font: 12px/1.8 Arial, sans-serif
 }
 
@@ -111,7 +111,8 @@ div#logo {
 
 header#top div#logo a {
     text-decoration: none;
-    color: #aaa
+    padding-left: 0%;
+    color: white
 }
 
 header#top div#logo a:hover {
@@ -123,16 +124,16 @@ div#logo img {
 }
 
 div#logo a span {
-    color: #eee
+    color: rgb(0, 132, 255)
 }
 
 a#view-site {
     font-size: 11px;
     font-weight: normal;
-    border: 1px solid #444;
+    border: 1px solid black;
     padding: 1px 3px;
     margin-left: 10px;
-    background: #333;
+    background: rgb(88, 87, 87);
     vertical-align: middle
 }
 
