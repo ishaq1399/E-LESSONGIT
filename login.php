@@ -1,100 +1,165 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<script language="javascript">
-function validasi(form){
-  if (form.username.value == ""){
-    alert("Anda belum mengisikan Username.");
-    form.username.focus();
-    return (false);
-  }
-
-  if (form.password.value == ""){
-    alert("Anda belum mengisikan Password.");
-    form.password.focus();
-    return (false);
-  }
-  return (true);
-}
-</script>
-
-<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<meta name="description"  content=""/>
-<meta name="keywords" content=""/>
-<meta name="robots" content="ALL,FOLLOW"/>
-<meta name="Author" content="Nuzul"/>
-<meta http-equiv="imagetoolbar" content="no"/>
-<title>.::Login E-Learning::.</title>
-<link rel="shortcut icon" type="image/x-icon" href="images/logos.jpg">
-<link rel="stylesheet" href="css_login/reset.css" type="text/css"/>
-<link rel="stylesheet" href="css_login/screen.css" type="text/css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/logos.jpg">
+    <!-- harus konek internet, karena bootstrapnya ngambil dari internet alias pake CDN (Content Delivery Network) -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<style>
+html{
+    background: url('images/background.jpg') top left #EEEEEE;
+    overflow: hidden;
+}
+/* body {
+    background-color: white;
+} */
+body{ 
+    background: url('images/background.jpg') top left; 
+    min-width: 1000px; 
+    min-height: 900px; 
+    text-align: left; 
+    margin: 0px; 
+    font-family: arial; 
+    font-size: 12px; 
+    color: #666666;
+}
+body.no-side{ 
+    background: none; 
+    color: #333333; 
+    min-height: 100%; 
+    margin-bottom: 100px; 
+}
 
+#loginbox {
+    margin-top: 30px;
+}
 
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/cufon.js"></script>
-<script type="text/javascript" src="js/Geometr231_Hv_BT_400.font.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
+#loginbox > div:first-child {        
+    padding-bottom: 10px;    
+}
 
+.iconmelon {
+    display: block;
+    margin: auto;
+}
+
+#form > div {
+    margin-bottom: 25px;
+}
+
+#form > div:last-child {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.panel {    
+    background-color: transparent;
+}
+
+.panel-body {
+    padding-top: 30px;
+    background-color: rgba(2555,255,255,.3);
+}
+
+#particles {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;                        
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;
+}
+
+.iconmelon,
+.im {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: block;
+  fill: #525151;
+}
+
+.iconmelon:after,
+.im:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.panel-title{
+    font-family : century gothic;
+}
+.profile {
+    margin-top : 40px;
+    background-image: url("images/3.jpg");
+	background-size: 100%;
+	padding: 5%;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	position: absolute;
+	left: 9%;
+	top: 25%;
+  }
+</style>
 </head>
-
-<body class="no-side">
-
-<div class="login-box">
-<div class="login-border">
-<div class="login-style">
-	<div class="login-header">
-
-  <h1><p> <b> Sign In</b> </p></h1>
+<body>
+<div class="container">
+        <div class="profile"></div>
+        <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">         
+            <div class="row">                
+                <div class="iconmelon">
+                  <svg viewBox="0 0 32 32">
+                    <g filter="">
+                      <use xlink:href="#git"></use>
+                    </g>
+                  </svg>
+                </div>
+            </div>
+            
+            <div class="panel panel-default" >
+                <div class="panel-heading">
+                    <div class="panel-title text-center"><h4> <b>E-LESSON</b> </h4></div>
+                </div>     
+                <div class="panel-body" >
+                    <form name="form" id="form" class="form-horizontal" enctype="multipart/form-data" method="POST" action="cek_login.php">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input id="user" type="text" class="form-control" name="username" value="" placeholder="Username">                                        
+                        </div>
     
-  <div class="logo clear">
-			<div align="right"><span class="title"></span></div>
-		</div>
-	</div>
-<form name="login" action="cek_login.php" method="POST" onSubmit="return validasi(this)">
-<div class="profile"></div>
-		<div class="login-inside">
-			<div class="login-data">
-			  <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                <tr>
-                  <td><div align="center">
-                    <table cellpadding="0" cellspacing="0">
-                      <tr>
-                        <td height="25"><b>Username</b></td>
-                        <td> :
-                          <input type="text" name="username"  class="text" /></td>
-                      </tr>
-                      <tr>
-                        <td height="26"><b>Password</b></td>
-                        <td> :
-                          <input type="password" class="text" name="password" /></td>
-                      </tr>
-
-
-                      <tr>
-                          <td colspan="2"><div align="right">                                  
-                          <input name="submit"  class="submit" type="submit" value="LOGIN" />
-                              </div></td></tr>
-                        <tr>
-                            <td height="30"><a href="registrasi.php" class ="text-center"><b>Daftar E-Lesson</b></a><br>
-                                            </td>
-                        </tr>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                        </div>                                                                  
+    
+                        <div class="form-group">
+                            <!-- Button -->
+                            <div class="col-sm-12 controls" style="margin-bottom:20px">
+                                <button type="submit" href="#" class="btn btn-primary col-sm-offset-4 col-md-4"><i class="glyphicon glyphicon-log-in"></i> Log in</button>   
+                            </div>
+                            <div class="col-sm-12 controls">
+                            <a href="registrasi.php""><button type="button" class="btn btn-primary col-sm-offset-4 col-md-4"><i class="glyphicon glyphicon-pencil"></i> Register</button></a>
+                        </div>
+                        </div>
                         
-                      
-                    </table>
-                  </div></td>
-                </tr>
-              </table>
-			</div>
-		</div>
-	  </form>
-
-</div>
-</div>
-</div>
-
+                    </form>     
+                </div>                     
+            </div>  
+        </div>
+    </div>
 </body>
-
-<meta http-equiv="content-type" content="text/html;charset=UTF-8">
 </html>
+
+
