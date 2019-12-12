@@ -39,6 +39,7 @@ switch($_GET[act]){
                         <td>$r[nama_ayah]</td>
                         <td><a href=javascript:confirmdelete('$aksi?module=registrasi&act=hapus&id=$r[id_registrasi]') title='Hapus'><img src='images/icons/cross.png' alt='Delete' /></a> |
                         <a href=?module=registrasi&act=detail&id=$r[id_registrasi]>Detail</a></td></tr>";
+                $no++;
           }
           echo "</table>";
     }
