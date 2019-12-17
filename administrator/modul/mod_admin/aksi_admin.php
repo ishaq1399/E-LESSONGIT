@@ -42,7 +42,7 @@ elseif ($module=='admin' AND $act=='input_pengajar'){
   $nama_file      = $_FILES['fupload']['name'];
   $direktori_file = "../../../foto_pengajar/$nama_file";
 
-  $pass=md5($_POST[password]);
+  $pass=($_POST[password]);
 
   $cek_nip = mysqli_query($db,"SELECT * FROM pengajar WHERE nip='$_POST[nip]'");
   $ketemu=mysqli_num_rows($cek_nip);
@@ -99,7 +99,7 @@ elseif ($module=='admin' AND $act=='input_pengajar'){
              }
         }
         else {
-        $pass=md5($_POST[password]);
+        $pass=($_POST[password]);
         $tgl_lahir=$_POST[thn].'-'.$_POST[bln].'-'.$_POST[tgl];
         mysqli_query($db,"INSERT INTO pengajar(nip,
                                  nama_lengkap,
@@ -233,7 +233,7 @@ elseif ($module=='admin' AND $act=='update_pengajar'){
   }
   //apabila foto tidak diubah dan password diubah
   elseif(empty($lokasi_file) AND !empty($_POST[password])){
-      $pass=md5($_POST[password]);
+      $pass=($_POST[password]);
       mysqli_query($db,"UPDATE pengajar SET nip  = '$_POST[nip]',
                                   nama_lengkap   = '$_POST[nama_lengkap]',
                                   username_login = '$_POST[username]',
@@ -289,7 +289,7 @@ elseif ($module=='admin' AND $act=='update_pengajar'){
                            WHERE  id_pengajar     = '$_POST[id]'");
                 }else{
                     UploadImage($nama_file);
-                    $pass=md5($_POST[password]);
+                    $pass=($_POST[password]);
                     mysqli_query($db,"UPDATE pengajar SET nip  = '$_POST[nip]',
                                   nama_lengkap   = '$_POST[nama_lengkap]',
                                   username_login = '$_POST[username]',
@@ -396,7 +396,7 @@ elseif ($module=='admin' AND $act=='update_pengajar'){
         }
         //apabila foto tidak diubah dan password diubah
         elseif(empty($lokasi_file) AND !empty($_POST[password])){
-            $pass=md5($_POST[password]);
+            $pass=($_POST[password]);
             mysqli_query($db,"UPDATE pengajar SET nip  = '$_POST[nip]',
                                   nama_lengkap   = '$_POST[nama_lengkap]',
                                   username_login = '$_POST[username]',
@@ -452,7 +452,7 @@ elseif ($module=='admin' AND $act=='update_pengajar'){
                            WHERE  id_pengajar     = '$_POST[id]'");
                 }else{
                     UploadImage($nama_file);
-                    $pass=md5($_POST[password]);
+                    $pass=($_POST[password]);
                     mysqli_query($db,"UPDATE pengajar SET nip  = '$_POST[nip]',
                                   nama_lengkap   = '$_POST[nama_lengkap]',
                                   username_login = '$_POST[username]',
@@ -495,7 +495,7 @@ elseif ($module=='admin' AND $act=='update_admin'){
   }
   // Apabila password diubah
   else{
-    $pass=md5($_POST[password]);
+    $pass=($_POST[password]);
     mysqli_query($db,"UPDATE admin SET username        = '$_POST[username]',
                                   password        = '$pass',
                                   nama_lengkap    = '$_POST[nama_lengkap]',
@@ -599,7 +599,7 @@ elseif ($module=='admin' AND $act=='update_pengajar2'){
     }
     //apabila foto tidak diubah dan password diubah
     elseif(empty($lokasi_file) AND !empty($_POST[password])){
-        $pass=md5($_POST[password]);
+        $pass=($_POST[password]);
         mysqli_query($db,"UPDATE pengajar SET nip  = '$_POST[nip]',
                                     nama_lengkap   = '$_POST[nama_lengkap]',
                                     username_login = '$_POST[username]',
@@ -655,7 +655,7 @@ elseif ($module=='admin' AND $act=='update_pengajar2'){
                              WHERE  id_pengajar     = '$_POST[id]'");
                   }else{
                       UploadImage($nama_file);
-                      $pass=md5($_POST[password]);
+                      $pass=($_POST[password]);
                       mysqli_query($db,"UPDATE pengajar SET nip  = '$_POST[nip]',
                                     nama_lengkap   = '$_POST[nama_lengkap]',
                                     username_login = '$_POST[username]',
@@ -762,7 +762,7 @@ elseif ($module=='admin' AND $act=='update_pengajar2'){
           }
           //apabila foto tidak diubah dan password diubah
           elseif(empty($lokasi_file) AND !empty($_POST[password])){
-              $pass=md5($_POST[password]);
+              $pass=($_POST[password]);
               mysqli_query($db,"UPDATE pengajar SET nip  = '$_POST[nip]',
                                     nama_lengkap   = '$_POST[nama_lengkap]',
                                     username_login = '$_POST[username]',
@@ -818,7 +818,7 @@ elseif ($module=='admin' AND $act=='update_pengajar2'){
                              WHERE  id_pengajar     = '$_POST[id]'");
                   }else{
                       UploadImage($nama_file);
-                      $pass=md5($_POST[password]);
+                      $pass=($_POST[password]);
                       mysqli_query($db,"UPDATE pengajar SET nip  = '$_POST[nip]',
                                     nama_lengkap   = '$_POST[nama_lengkap]',
                                     username_login = '$_POST[username]',

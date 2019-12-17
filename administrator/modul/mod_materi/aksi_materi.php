@@ -19,7 +19,7 @@ if ($module=='materi' AND $act=='input_materi'){
   $tipe_file   = $_FILES['fupload']['type'];
   $direktori_file = "../../../files_materi/$nama_file";
 
-  $extensionList = array("zip", "rar", "doc", "docx", "ppt", "pptx", "pdf");
+  $extensionList = array("zip", "rar", "doc", "docx", "ppt", "pptx", "pdf","mp4","mkv","mov","3gp");
   $pecah = explode(".", $nama_file);
   $ekstensi = $pecah[1];
 
@@ -126,7 +126,7 @@ elseif($module=='materi' AND $act=='edit_materi'){
   $tipe_file   = $_FILES['fupload']['type'];
   $direktori_file = "../../../files_materi/$nama_file";
 
-  $extensionList = array("zip", "rar", "doc", "docx", "ppt", "pptx", "pdf");
+  $extensionList = array("zip", "rar", "doc", "docx", "ppt", "pptx", "pdf","mp4","mkv","mov","3gp");
   $pecah = explode(".", $nama_file);
   $ekstensi = $pecah[1];
 

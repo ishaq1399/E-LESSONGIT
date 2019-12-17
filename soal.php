@@ -16,15 +16,15 @@ else{
 ?>
 
 <html>
-<header>
+<head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <meta name="description"  content=""/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="ALL,FOLLOW"/>
-<meta name="Author" content="Nuzul"/>
+<meta name="Author" content="E-LESSON"/>
 <meta http-equiv="imagetoolbar" content="no"/>
 <title>.::Halaman Tugas / Quiz::.</title>
-<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+<link rel="shortcut icon" type="image/x-icon" href="images/logos.jpg">
 <link rel="stylesheet" href="css/reset.css" type="text/css"/>
 <link rel="stylesheet" href="css/screen2.css" type="text/css"/>
 <link rel="stylesheet" href="css/fancybox.css" type="text/css"/>
@@ -220,10 +220,10 @@ function tombol()
 document.getElementById("tombol").innerHTML= "<input type=button value=Simpan onclick=selesai()>";
 }
 </script>
-</header>
+</head>
 <body onload="init(),noBack();" onpageshow="if (event.persisted) noBack();" onunload="keluar()">
 <div class="sidebar">
-		<div class="logo2 clear"><img src="images/logo.png" alt="" width="185" height="200" /></div>
+		<div class="logo2 clear"><img src="images/logos.jpg" alt="" width="185" height="200" /></div>
                     <div class="waktu">
 		  <ul><li><a>Sisa Waktu Anda</a>
 			  <ul>

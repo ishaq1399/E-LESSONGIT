@@ -27,7 +27,7 @@ switch($_GET[act]){
 
           <br><table id='table1' class='gtable sortable'><thead>
           <tr><th>No</th><th>Nama Modul</th><th>Link</th><th>Publish</th><th>Aktif</th><th>Status</th><th>Aksi</th></tr></thead>";
-    $tampil=mysqli_query($db,("SELECT * FROM modul ORDER BY urutan");
+    $tampil=mysqli_query($db,"SELECT * FROM modul ORDER BY urutan");
     while ($r=mysqli_fetch_array($tampil)){
       echo "<tr><td>$r[urutan]</td>
             <td>$r[nama_modul]</td>
@@ -78,7 +78,7 @@ switch($_GET[act]){
  
   case "editmodul":
     if ($_SESSION[leveluser]=='admin'){
-    $edit = mysqli_query($db,("SELECT * FROM modul WHERE id_modul='$_GET[id]'");
+    $edit = mysqli_query($db,"SELECT * FROM modul WHERE id_modul='$_GET[id]'");
     $r    = mysqli_fetch_array($edit);
 
     echo "<form class='uniform' method='POST' action='$aksi?module=modul&act=update'>

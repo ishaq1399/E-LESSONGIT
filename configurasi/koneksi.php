@@ -1,4 +1,5 @@
 <?php
+error_reporting("~EAL^Deprecated");
 $db = mysqli_connect("localhost","root","","elesson");
 
 // Check connection

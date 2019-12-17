@@ -274,9 +274,13 @@ case "daftarmateri":
              elseif ($ekstensi == 'docx'){
                  echo "<td rowspan='5'><img src='images/doc.png'></td>";
              }
+             elseif ($ekstensi == 'mp4'){
+                echo "<td rowspan='5'><img src='images/video.jpg'></td>";
+            }
              }else{
                  echo "<td rowspan='5'><img src='images/kosong.png'></td>";
              }
+             
              echo "<td>Judul</td><td>: $r[judul]</td></tr>
              <tr><td>Nama File</td><td>: $r[nama_file]</td></tr>
              <tr><td>Ukuran</td>";

@@ -160,6 +160,7 @@ function validasi(form){
                                 <dd><input type="text" name="nama" size="40"/></dd>
                                 <dt><label>Email :</label></dt>
                                 <dd><input type="text" name="email" size="40" id="email"/><span id="pesan_email"></span></dd>
+                        
                                 <dt><label>Kelas :</label></dt>
                                 <?php
                                 include "configurasi/koneksi.php";

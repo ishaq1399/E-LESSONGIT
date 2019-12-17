@@ -1459,8 +1459,8 @@ case "nilaisiswa":
                       <tr><th>Deskripsi Tugas/Quiz </th><th>Nilai</th></tr>";
                       $n_pilganda = mysqli_fetch_array($pilganda);
                       $n_esay = mysqli_fetch_array($esay);
-                      echo "<tr><td>Tugas Pilihan Ganda</td><td>$n_pilganda[persentase]</td></tr>
-                            <tr><td>Tugas Essay</td><td>$n_esay[nilai]</td></tr>
+                      echo "<tr><td>Soal Pilihan Ganda</td><td>$n_pilganda[persentase]</td></tr>
+                            <tr><td>Soal Essay</td><td>$n_esay[nilai]</td></tr>
                             </table>
                             <p class='garisbawah'></p><input type=button class='tombol' value='Kembali' onclick=self.history.back()>";
                 }

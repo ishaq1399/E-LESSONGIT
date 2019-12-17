@@ -37,7 +37,7 @@ if ($module=='siswa' AND $act=='input_siswa'){
                     window.location=(href='../../media_admin.php?module=siswa&act=tambahsiswa')</script>";
                 }else{
                 UploadImage_siswa($nama_file);
-                $pass=md5($_POST[password]);
+                $pass=($_POST[password]);
                 mysqli_query($db,"INSERT INTO siswa(nis,
                                  nama_lengkap,
                                  username_login,
@@ -90,7 +90,7 @@ if ($module=='siswa' AND $act=='input_siswa'){
       }
   //apablia nis tersedia dan foto tidak ada
   elseif(empty($ketemu) AND empty($lokasi_file)){
-    $pass=md5($_POST[password]);
+    $pass=($_POST[password]);
     mysqli_query($db,"INSERT INTO siswa(nis,
                                  nama_lengkap,
                                  username_login,
@@ -246,7 +246,7 @@ if ($module=='siswa' AND $act=='input_siswa'){
   }
   //apabila foto tidak diubah dan password diubah
   elseif(empty($lokasi_file) AND !empty($_POST[password])){
-      $pass=md5($_POST[password]);
+      $pass=($_POST[password]);
       mysqli_query($db,"UPDATE siswa SET
                                   nis              = '$_POST[nis]',
                                   nama_lengkap     = '$_POST[nama]',
@@ -289,7 +289,7 @@ if ($module=='siswa' AND $act=='input_siswa'){
             unlink($img3);
 
             UploadImage_siswa($nama_file);
-            $pass=md5($_POST[password]);
+            $pass=($_POST[password]);
             mysqli_query($db,"UPDATE siswa SET
                                   nis              = '$_POST[nis]',
                                   nama_lengkap     = '$_POST[nama]',
@@ -315,7 +315,7 @@ if ($module=='siswa' AND $act=='input_siswa'){
             }
             else{
                UploadImage_siswa($nama_file);
-               $pass=md5($_POST[password]);
+               $pass=($_POST[password]);
                mysqli_query($db,"UPDATE siswa SET
                                   nis              = '$_POST[nis]',
                                   nama_lengkap     = '$_POST[nama]',
@@ -446,7 +446,7 @@ if ($module=='siswa' AND $act=='input_siswa'){
   }
   //apabila foto tidak diubah dan password diubah
   elseif(empty($lokasi_file) AND !empty($_POST[password])){
-      $pass=md5($_POST[password]);
+      $pass=($_POST[password]);
       mysqli_query($db,"UPDATE siswa SET
                                   nis              = '$_POST[nis]',
                                   nama_lengkap     = '$_POST[nama]',
@@ -489,7 +489,7 @@ if ($module=='siswa' AND $act=='input_siswa'){
             unlink($img3);
 
             UploadImage_siswa($nama_file);
-            $pass=md5($_POST[password]);
+            $pass=($_POST[password]);
             mysqli_query($db,"UPDATE siswa SET
                                   nis              = '$_POST[nis]',
                                   nama_lengkap     = '$_POST[nama]',
@@ -515,7 +515,7 @@ if ($module=='siswa' AND $act=='input_siswa'){
             }
             else{
                UploadImage_siswa($nama_file);
-               $pass=md5($_POST[password]);
+               $pass=($_POST[password]);
                mysqli_query($db,"UPDATE siswa SET
                                   nis              = '$_POST[nis]',
                                   nama_lengkap     = '$_POST[nama]',
@@ -759,6 +759,8 @@ elseif ($module=='siswa' AND $act=='update_profil_siswa'){
   }
 }
 
+//update acount siswa
+
 elseif ($module=='siswa' AND $act=='update_account_siswa'){
     //jika username dan password tidak diubah
     if (empty($_POST[username]) AND empty($_POST[password])){
@@ -798,7 +800,7 @@ elseif ($module=='siswa' AND $act=='update_account_siswa'){
     }
     //jika username tidak di ubah dan pasword di ubah
     elseif (empty($_POST[username]) AND !empty($_POST[password])){
-        $pass = md5($_POST[password]);
+        $pass = ($_POST[password]);
         mysqli_query($db,"UPDATE siswa SET password_login = '$pass'
                                   WHERE id_siswa     = '$_SESSION[idsiswa]'");
 
@@ -811,7 +813,7 @@ elseif ($module=='siswa' AND $act=='update_account_siswa'){
         $data_username = mysqli_fetch_array($username);
         //jika username sama dengan di database
         if ($_POST[username] == $data_username[username_login]){
-        $pass = md5($_POST[password]);
+        $pass = ($_POST[password]);
         mysqli_query($db,"UPDATE siswa SET username_login = '$_POST[username]',
                                       password_login = '$pass'
                                   WHERE id_siswa     = '$_SESSION[idsiswa]'");
@@ -825,7 +827,7 @@ elseif ($module=='siswa' AND $act=='update_account_siswa'){
             $data_username2 = mysqli_num_rows($username2);
             //jika username tersedia
             if (empty($data_username2)){
-                $pass = md5($_POST[password]);
+                $pass = ($_POST[password]);
                 mysqli_query($db,"UPDATE siswa SET username_login = '$_POST[username]',
                                       password_login = '$pass'
                                   WHERE id_siswa     = '$_SESSION[idsiswa]'");

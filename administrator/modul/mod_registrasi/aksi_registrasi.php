@@ -24,10 +24,11 @@ if ($module=='registrasi' AND $act=='hapus'){
 elseif ($module=='registrasi' AND $act=='terima'){
     $registrasi = mysqli_query($db,"SELECT * FROM registrasi_siswa WHERE id_registrasi = '$_GET[id]'");
     $r=mysqli_fetch_array($registrasi);
-    $pass = md5($r[nis]);
-    mysqli_query($db,"INSERT INTO siswa(nis,nama_lengkap,username_login,password_login,id_kelas,alamat,tempat_lahir,
+    $user = $r[username_login];
+    $pass = $r[nis];
+    mysqli_query($db,"INSERT INTO siswa(nis,nama_lengkap,username_login,password_login,blokir,id_kelas,alamat,tempat_lahir,
                                     tgl_lahir,jenis_kelamin,agama,nama_ayah,nama_ibu,th_masuk,email)
-                             VALUES('$r[nis]','$r[nama_lengkap]','$r[nis]','$pass','$r[id_kelas]','$r[alamat]','$r[tempat_lahir]',
+                             VALUES('$r[nis]','$r[nama_lengkap]','$user','$pass','N','$r[id_kelas]','$r[alamat]','$r[tempat_lahir]',
                                      '$r[tgl_lahir]','$r[jenis_kelamin]','$r[agama]','$r[nama_ayah]','$r[nama_ibu]','$r[th_masuk]',
                                      '$r[email]')");
     mysqli_query($db,"DELETE FROM registrasi_siswa WHERE id_registrasi = '$_GET[id]'");

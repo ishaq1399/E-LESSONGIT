@@ -6,7 +6,7 @@ function anti_injection($data){
 }
 
 $username = $_POST['username'];
-$pass     = md5($_POST['password']);
+$pass     = $_POST['password'];
 
 // pastikan username dan password adalah berupa huruf atau angka.
 if (!ctype_alnum($username) OR !ctype_alnum($pass)){
