@@ -3,10 +3,10 @@ include "../configurasi/koneksi.php";
 
 if ($_GET['module']=='home'){
   if ($_SESSION['leveluser']=='admin'){
-      echo "<span class='judulhead'><b>Selamat Datang Admin</b></span>";
+      echo "<span class='judulhead'><b>element.style.css Admin</b></span>";
   }
   elseif ($_SESSION['leveluser']=='pengajar'){
-      echo "<span class='judulhead'><b>Selamat Datang Pengajar</b></span>";
+      echo "<span class='judulhead'><b>element.style.css Pengajar</b></span>";
   }
 }
 elseif ($_GET['module']=='modul'){

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <title>Registrasi eLesson</title>
-<meta charset="utf-8">
+<meta meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="administrator/css/style_register.css">
 <link rel="shortcut icon" type="image/x-icon" href="images/logos.jpg">
 
