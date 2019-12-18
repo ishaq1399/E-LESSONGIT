@@ -204,7 +204,7 @@ function confirmClose() {
 	</div>
 
 
-	<div class="main"> <!-- *** mainpage layout *** -->
+	<div class="main"> <!-- *** mainpage layout user *** -->
 	<div class="main-wrap">
 		<div class="header clear">
 			<ul class="links clear">
