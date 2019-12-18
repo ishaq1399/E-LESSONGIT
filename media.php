@@ -208,7 +208,7 @@ function confirmClose() {
 	<div class="main-wrap">
 		<div class="header clear">
 			<ul class="links clear">
-			<li>:::: <strong>element.style.css <?php echo "$_SESSION[namalengkap]";?></strong>&nbsp;::::&nbsp;</li>
+			<li>:::: <strong><?php echo "$_SESSION[namalengkap]";?></strong>&nbsp;::::&nbsp;</li>
 			<li><a href="?module=home"><img src="images/home.png" alt="" class="icon" /> <span class="text">Beranda</span></a></li>
 			<li><div class="clear">
           <ul><SCRIPT language=JavaScript src="almanak.js"></SCRIPT>

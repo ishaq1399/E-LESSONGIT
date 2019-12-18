@@ -1,14 +1,21 @@
 @import url("grid.css");
 @import url("reset.css");
 
-html,
+html{
+    background-image: url(../images/icons/biru.png); 
+    background-size: 100%;
+}
+}
 body {
     height: 100%
 }
 
 body {
     color: #444;
+<<<<<<< HEAD
     background: rgb(112, 177, 171);
+=======
+>>>>>>> 450860a4b62cb52f4fe4a13fbd4232bd5d5ff842
     font: 12px/1.8 Arial, sans-serif
 }
 
@@ -338,8 +345,8 @@ article .links {
 #login2 {
     width: 400px;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 55%;
+    left: 52.3%;
     margin-left: -240px;
     margin-top: -260px
 }
