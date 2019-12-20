@@ -18,7 +18,7 @@ $aksi_mapel="modul/mod_matapelajaran/aksi_matapelajaran.php";
 // Bagian Home
 if ($_GET['module']=='home'){
   if ($_SESSION['leveluser']=='admin'){
-  echo "<p>Hai <b>$_SESSION[namalengkap]</b>, element.style.css di halaman Administrator eLesson TAMAN AYO PINTAR.<br>
+  echo "<p>Hai <b>$_SESSION[namalengkap]</b>, Selamat Datang di halaman Administrator eLesson TAMAN AYO PINTAR.<br>
           Silahkan klik menu pilihan yang berada di sebelah kiri untuk mengelola website.</p>";
           ?>
          <h2>Quick Links</h2>
@@ -92,7 +92,7 @@ if ($_GET['module']=='home'){
   
   }
   elseif ($_SESSION['leveluser']=='pengajar'){
-  echo "<p>Hai <b>$_SESSION[namalengkap]</b>,  element.style.css di halaman Pengajar.<br>
+  echo "<p>Hai <b>$_SESSION[namalengkap]</b>,  Selamat Datang di halaman Pengajar.<br>
           Silahkan klik menu pilihan dibawah untuk Management Kelas dan Mapel.</p><br>";
 
           echo "<p align=right>Login : $hari_ini,
@@ -230,7 +230,7 @@ if ($_GET['module']=='home'){
  	}
         else{
              echo "<h2>Home</h2>
-          <p>Hai <b>$_SESSION[namalengkap]</b>, element.style.css di eLesson.</p>
+          <p>Hai <b>$_SESSION[namalengkap]</b>, Selamat Datang di eLesson.</p>
           <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
           <p align=right>Login : $hari_ini, ";
   echo tgl_indo(date("Y m d"));
