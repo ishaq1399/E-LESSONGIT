@@ -5,7 +5,7 @@ body.no-side		{ background: none; color: #333333; min-height: 100%; margin-botto
 .clear:after 		{ content: "."; display: block; height: 0; overflow:hidden; clear: both; visibility: hidden; }
 .clean-margin		{ margin: 0px !important; }
 .clean-padding		{ padding: 0px !important; }
-
+/* oke */
 .half			{ width: 48% !important; }
 .fl			{ float: left; }
 .fr			{ float: right; }
