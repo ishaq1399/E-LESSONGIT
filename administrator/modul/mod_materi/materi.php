@@ -222,7 +222,7 @@ switch($_GET[act]){
         while ($r=mysqli_fetch_array($mapel)){
         echo "<tr><td>$no</td>
              <td>$r[nama]</td>";
-             echo "<td><input type=button class='tombol2' value='Lihat File Materi'
+             echo "<td><input type=button class='tombol' value='Lihat File Materi'
                        onclick=\"window.location.href='?module=materi&act=daftarmateri&id=$r[id_matapelajaran]';\"></td></tr>";
         $no++;
         }
@@ -303,7 +303,7 @@ case "daftarmateri":
 
         echo "<div id=paging>$linkHalaman</div><br>";
 
-        echo "<p class='garisbawah'></p><input type=button class='tombol' value='Kembali'
+        echo "<p class='garisbawah'></p><input type=button class='tombol2' value='Kembali'
           onclick=self.history.back()>";
     }
     else{

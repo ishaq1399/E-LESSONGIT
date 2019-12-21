@@ -162,7 +162,7 @@ case "lihatmurid":
 
     echo "<div id=paging>$linkHalaman</div><br>
           <p class='garisbawah'></p>
-          <input type=button class='tombol' value='Kembali'
+          <input type=button class='tombol2' value='Kembali'
           onclick=self.history.back()>";
     }else{
         echo "<script>window.alert('Tidak ada siswa dikelas ini');
@@ -365,8 +365,8 @@ case "tambahsiswa":
                                                 ***) Apabila foto tidak diganti, dikosongkan saja</td></tr>";   
 
     echo "<tr><td>Jabatan</td>      <td> : <input type=text name='jabatan' size=70 value='$r[jabatan]'></td></tr>
-          <tr><td colspan=2><input type=submit class='tombol' value='Update'>
-                            <input type=button class='tombol' value='Batal'
+          <tr><td colspan=2><input type=submit class='tombol1' value='Update'>
+                            <input type=button class='tombol2' value='Batal'
                             onclick=self.history.back()>
                             </td></tr>
           </table></form>";
@@ -497,7 +497,7 @@ case "tambahsiswa":
           <tr><td>E-Mail</td>             <td> : <a href=mailto:$siswa[email]>$siswa[email]</a></td></tr>
           <tr><td>No.Telp/Hp</td>         <td> : $siswa[no_telp]</td></tr>
           <tr><Td>Jabatan</td>            <td> : $siswa[jabatan]</td></tr>";
-          echo"<tr><td colspan='3'><input type=button class='tombol' value='Kembali'
+          echo"<tr><td colspan='3'><input type=button class='tombol2' value='Kembali'
           onclick=self.history.back()></td></tr></table>";
 
     }
@@ -535,7 +535,7 @@ case "detailprofilsiswa":
           <tr><td>E-Mail</td>             <td> : <a href=mailto:$siswa[email]>$siswa[email]</a></td></tr>
           <tr><td>No.Telp/Hp</td>         <td> : $siswa[no_telp]</td></tr>
           <tr><td>Jabatan</td>            <td> : $siswa[jabatan]</td></tr>";
-          echo"<tr><td colspan='3'><input type=button class='tombol' value='Edit Profil' onclick=\"window.location.href='?module=siswa&act=editsiswa&id=$siswa[id_siswa]';\"></td></tr></table>";
+          echo"<tr><td colspan='3'><input type=button class='tombol1' value='Edit Profil' onclick=\"window.location.href='?module=siswa&act=editsiswa&id=$siswa[id_siswa]';\"></td></tr></table>";
     }
     break;
 
@@ -550,7 +550,7 @@ case "detailaccount":
         <tr><td>Password</td><td>:<input type=password name='password' size='40'></td></tr>
         <tr><td colspan=2>*) Apabila Username tidak diubah di kosongkan saja.</td></tr>
         <tr><td colspan=2>**) Apabila Password tidak diubah di kosongkan saja.</td></tr>
-        <tr><td colspan=2><input type=submit class='tombol' value='Update'></td></tr>
+        <tr><td colspan=2><input type=submit class='tombol1' value='Update'></td></tr>
         </table>";
     }
     break;

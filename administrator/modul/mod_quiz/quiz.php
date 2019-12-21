@@ -205,7 +205,7 @@ switch($_GET[act]){
                 echo "<tr><td>$no</td>
                         <td>$t[nama]</td>";                   
                         
-                        echo"<td><input type=button class='tombol2' value='Lihat Tugas / Quiz'
+                        echo"<td><input type=button class='tombol' value='Lihat Tugas / Quiz'
                        onclick=\"window.location.href='?module=quiz&act=daftartopik&id=$t[id_matapelajaran]&id_kelas=$data_siswa[id_kelas]';\"></td></tr>";
             $no++;
             }
@@ -1426,13 +1426,13 @@ case "daftarnilai":
                        }
                        echo"<tr><td><b>Waktu Pengerjaan</b></td><td><b>: $waktu menit</b></td></tr>
                             <tr><td><b>Info Soal/Quiz</b></td><td><b>: $t[info]</b></td></tr>
-                            <tr><td></td><td><input type=button class='' value='Lihat Nilai'
+                            <tr><td></td><td><input type=button class='tombol' value='Lihat Nilai'
                        onclick=\"window.location.href='?module=quiz&act=nilaisiswa&id_topik=$t[id_tq]';\"></td></tr>";
                        
               $no++;
               }
               echo"</table>
-                   <p class='garisbawah'></p><input type=button class='tombol' value='Kembali' onclick=self.history.back()>";
+                   <p class='garisbawah'></p><input type=button class='tombol2' value='Kembali' onclick=self.history.back()>";
         }else{
             echo "<script>window.alert('Belum ada Tugas atau Quiz di mata pelajaran ini, jadi tidak ada nilai.');
                     window.location=(href='media.php?module=nilai')</script>";
@@ -1462,7 +1462,7 @@ case "nilaisiswa":
                       echo "<tr><td>Soal Pilihan Ganda</td><td>$n_pilganda[persentase]</td></tr>
                             <tr><td>Soal Essay</td><td>$n_esay[nilai]</td></tr>
                             </table>
-                            <p class='garisbawah'></p><input type=button class='tombol' value='Kembali' onclick=self.history.back()>";
+                            <p class='garisbawah'></p><input type=button class='tombol2' value='Kembali' onclick=self.history.back()>";
                 }
                 elseif (empty($cek_pilganda) AND !empty($cek_esay)){
                     echo"<br><b class='judul'>Nilai Anda</b><br><p class='garisbawah'></p>
@@ -1473,7 +1473,7 @@ case "nilaisiswa":
                       echo "<tr><td>Tugas Pilihan Ganda</td><td>Anda belum mengerjakan</td></tr>
                             <tr><td>Tugas Essay</td><td>$n_esay[nilai]</td></tr>
                             </table>
-                            <p class='garisbawah'></p><input type=button class='tombol' value='Kembali' onclick=self.history.back()>";
+                            <p class='garisbawah'></p><input type=button class='tombol2' value='Kembali' onclick=self.history.back()>";
                 }
                 elseif (!empty($cek_pilganda) AND empty($cek_esay)){
                     echo"<br><b class='judul'>Nilai Anda</b><br><p class='garisbawah'></p>
@@ -1484,7 +1484,7 @@ case "nilaisiswa":
                       echo "<tr><td>Tugas Pilihan Ganda</td><td>$n_pilganda[persentase]</td></tr>
                             <tr><td>Tugas Essay</td><td>Belum di koreksi</td></tr>
                             </table>
-                            <p class='garisbawah'></p><input type=button class='tombol' value='Kembali' onclick=self.history.back()>";
+                            <p class='garisbawah'></p><input type=button class='tombol2' value='Kembali' onclick=self.history.back()>";
                 }
                 elseif (empty($cek_pilganda) AND empty($cek_esay)){
                     echo"<br><b class='judul'>Nilai Anda</b><br><p class='garisbawah'></p>
@@ -1495,7 +1495,7 @@ case "nilaisiswa":
                       echo "<tr><td>Tugas Pilihan Ganda</td><td>Anda Belum mengerjakan</td></tr>
                             <tr><td>Tugas Essay</td><td>Anda Belum mengerjakan</td></tr>
                             </table>
-                            <p class='garisbawah'></p><input type=button class='tombol' value='Kembali' onclick=self.history.back()>";
+                            <p class='garisbawah'></p><input type=button class='tombol2' value='Kembali' onclick=self.history.back()>";
                 }
 
         }
@@ -1511,7 +1511,7 @@ case "nilaisiswa":
                           $n_esay = mysqli_fetch_array($esay);
                           echo "<tr><td>Tugas Essay</td><td>$n_esay[nilai]</td></tr>
                           </table>
-                                <p class='garisbawah'></p><input type=button class='tombol' value='Kembali' onclick=self.history.back()>";
+                                <p class='garisbawah'></p><input type=button class='tombol2' value='Kembali' onclick=self.history.back()>";
                         
                 }
                 elseif (empty($cek_esay)) {
@@ -1525,7 +1525,7 @@ case "nilaisiswa":
                           <tr><th>Deskripsi Tugas/Quiz </th><th>Nilai</th></tr>";
                           echo "<tr><td>Tugas Essay</td><td>Belum Dikoreksi</td></tr>
                           </table>
-                                <p class='garisbawah'></p><input type=button class='tombol' value='Kembali' onclick=self.history.back()>";
+                                <p class='garisbawah'></p><input type=button class='tombol2' value='Kembali' onclick=self.history.back()>";
 
                     }
                     elseif (empty($c_kerjakan)){
@@ -1534,7 +1534,7 @@ case "nilaisiswa":
                               <tr><th>Deskripsi Tugas/Quiz </th><th>Nilai</th></tr>";
                               echo "<tr><td>Tugas Essay</td><td>Anda belum mengerjakan</td></tr>
                               </table>
-                                    <p class='garisbawah'></p><input type=button class='tombol' value='Kembali' onclick=self.history.back()>";
+                                    <p class='garisbawah'></p><input type=button class='tombol2' value='Kembali' onclick=self.history.back()>";
 
 
                     }
@@ -1552,7 +1552,7 @@ case "nilaisiswa":
                       $n_pilganda = mysqli_fetch_array($pilganda);
                       echo "<tr><td>Tugas Pilihan Ganda</td><td>$n_pilganda[persentase]</td></tr>
                             </table>
-                            <p class='garisbawah'></p><input type=button class='tombol' value='Kembali' onclick=self.history.back()>";
+                            <p class='garisbawah'></p><input type=button class='tombol2' value='Kembali' onclick=self.history.back()>";
                 }
                 else {
                     echo"<br><b class='judul'>Nilai Anda</b><br><p class='garisbawah'></p>
@@ -1561,7 +1561,7 @@ case "nilaisiswa":
                       $n_pilganda = mysqli_fetch_array($pilganda);
                       echo "<tr><td>Tugas Pilihan Ganda</td><td>Anda Belum mengerjakan</td></tr>
                             </table>
-                            <p class='garisbawah'></p><input type=button class='tombol' value='Kembali' onclick=self.history.back()>";
+                            <p class='garisbawah'></p><input type=button class='tombol2' value='Kembali' onclick=self.history.back()>";
                 }
         }
         elseif (!empty($c_pilganda) AND !empty($c_esay)){
@@ -1590,14 +1590,14 @@ case "infokerjakan":
             3. Pilih browser yang suport dengan Elearning SMP Muhdella yaitu Mozilla Firefox.<br>
             4. Jika mati lampu hubungi Pengajar Mata Pelajaran terkait untuk bisa Ujian Kembali.</h3><br>";
         echo"<p class='garisbawah'></p>
-            <input type=submit class='tombol' value='Mulai Mengerjakan' onclick='window.location.reload()'>
-            <input type=button class='tombol' value='Kembali' onclick=self.history.back()>";
+            <input type=submit class='tombol1' value='Mulai Mengerjakan' onclick='window.location.reload()'>
+            <input type=button class='tombol2' value='Kembali' onclick=self.history.back()>";
         }
         elseif ($data[hits] >= 1){
             echo"<br><b class='judul'>Informasi</b><br><p class='garisbawah'></p>";
             echo "<h3>Anda Sudah mengerjakan tugas / Quiz ini</h3>";
             echo "<p class='garisbawah'></p>
-                <input type=button class='tombol' value='Kembali'
+                <input type=button class='tombol2' value='Kembali'
                 onclick=self.history.back()>";
         }
     }

@@ -170,7 +170,7 @@ switch($_GET[act]){
                     }else{
                             echo"<td></td>";
                     }
-             echo "<td><input type=button class='tombol' value='Edit Kelas'
+             echo "<td><input type=button class='tombol1' value='Edit Kelas'
           onclick=\"window.location.href='?module=kelas&act=editkelas&id=$r[id]';\">
           <input type=button class='tombol' value='Lihat Teman'
           onclick=\"window.location.href='?module=siswa&act=lihatmurid&id=$r[id_kelas]';\">
@@ -306,8 +306,8 @@ switch($_GET[act]){
                                       while($t=mysqli_fetch_array($tampilk)){
                                             echo "<option value=$t[id_kelas]>$t[nama]</option>";
                                       }echo"</select></td></tr>
-        <tr><td colspan=2><input type=submit class='tombol' value='Update'>
-                          <input type=button class='tombol' value='Batal'
+        <tr><td colspan=2><input type=submit class='tombol1' value='Update'>
+                          <input type=button class='tombol2' value='Batal'
                           onclick=self.history.back()></td></tr>
         </form></table>";
     }
