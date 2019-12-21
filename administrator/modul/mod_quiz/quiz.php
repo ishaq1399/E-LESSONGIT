@@ -205,7 +205,7 @@ switch($_GET[act]){
                 echo "<tr><td>$no</td>
                         <td>$t[nama]</td>";                   
                         
-                        echo"<td><input type=button class='tombol' value='Lihat Tugas / Quiz'
+                        echo"<td><input type=button class='tombol2' value='Lihat Tugas / Quiz'
                        onclick=\"window.location.href='?module=quiz&act=daftartopik&id=$t[id_matapelajaran]&id_kelas=$data_siswa[id_kelas]';\"></td></tr>";
             $no++;
             }
@@ -1426,7 +1426,7 @@ case "daftarnilai":
                        }
                        echo"<tr><td><b>Waktu Pengerjaan</b></td><td><b>: $waktu menit</b></td></tr>
                             <tr><td><b>Info Soal/Quiz</b></td><td><b>: $t[info]</b></td></tr>
-                            <tr><td></td><td><input type=button class='tombol' value='Lihat Nilai'
+                            <tr><td></td><td><input type=button class='' value='Lihat Nilai'
                        onclick=\"window.location.href='?module=quiz&act=nilaisiswa&id_topik=$t[id_tq]';\"></td></tr>";
                        
               $no++;

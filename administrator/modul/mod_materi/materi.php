@@ -222,7 +222,7 @@ switch($_GET[act]){
         while ($r=mysqli_fetch_array($mapel)){
         echo "<tr><td>$no</td>
              <td>$r[nama]</td>";
-             echo "<td><input type=button class='tombol' value='Lihat File Materi'
+             echo "<td><input type=button class='tombol2' value='Lihat File Materi'
                        onclick=\"window.location.href='?module=materi&act=daftarmateri&id=$r[id_matapelajaran]';\"></td></tr>";
         $no++;
         }
@@ -291,7 +291,7 @@ case "daftarmateri":
                                 echo "<td>: </td></tr>";
                             }
              echo"<tr><td>Tanggal Posting</td><td>: $r[tgl_posting]</td></tr>
-             <tr><td colspan=2><input type=button class='tombol' value='Download File'
+             <tr><td colspan=2><input type=button class='tombol1' value='Download File'
                        onclick=\"window.location.href='downlot.php?file=$r[nama_file]';\">
                        <b class='judul'>Di download : $r[hits] kali</b></td></tr>";
         $no++;
