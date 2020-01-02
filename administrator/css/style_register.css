@@ -2,10 +2,11 @@
 @import url("reset.css");
 
 html{
-    background-image: url(../images/icons/biru.png); 
+    background-image: url(../images/icons/biru.png);
     background-size: 100%;
 }
-}
+
+
 body {
     height: 100%
 }
