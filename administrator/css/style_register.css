@@ -5,17 +5,13 @@ html{
     background-image: url(../images/icons/biru.png); 
     background-size: 100%;
 }
-}
 body {
     height: 100%
 }
 
 body {
     color: #444;
-<<<<<<< HEAD
     background: rgb(112, 177, 171);
-=======
->>>>>>> 450860a4b62cb52f4fe4a13fbd4232bd5d5ff842
     font: 12px/1.8 Arial, sans-serif
 }
 
