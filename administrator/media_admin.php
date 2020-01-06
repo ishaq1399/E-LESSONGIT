@@ -166,7 +166,7 @@ elseif ($_SESSION[leveluser]=='pengajar'){
 				<section>
                                     <SCRIPT language=JavaScript>var d = new Date();
                                     var h = d.getHours();
-                                    if (h < 11) { document.write('element.style.css Pagi, Pengunjung...'); }
+                                    if (h < 11) { document.write('Selamat Pagi, Pengunjung...'); }
                                     else { if (h < 15) { document.write('Selamat Siang, Pengunjung..'); }
                                     else { if (h < 19) { document.write('Selamat Sore, Pengunjung..'); }
                                     else { if (h <= 23) { document.write('Selamat Malam, Pengunjung..'); }
