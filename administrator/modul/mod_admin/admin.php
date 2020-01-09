@@ -3,7 +3,7 @@
 session_start();
  if (empty($_SESSION['username']) AND empty($_SESSION['passuser'])){
   echo "<link href=../css/style.css rel=stylesheet type=text/css>";
-  echo "<div class='error msg'>Untuk mengakses Modul anda harus login.</div>";
+  echo "<div class='error msg'>Untuk Mengakses Modul Anda harus Login.</div>";
 }
 else{
 
