@@ -3,7 +3,7 @@
 if ($_GET['module']=='home'){
   if ($_SESSION['leveluser']=='siswa'){
   echo "<br><b class='judul'>Hai $_SESSION[namalengkap]</b><br><p class='garisbawah'></p>
-        Selamat datang di <b>e-Lesson TAMAN AYO PINTAR</b>.<br>
+        Selamat datang di <b>e-Lesson ANAK PINTAR</b>.<br>
         <b>Bagi Siswa yang Baru Bergabung Segera Lakukan Update Username & Password</b>
         <p>&nbsp;</p>
         <p>&nbsp;</p>

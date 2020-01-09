@@ -49,7 +49,7 @@ function validasi(form){
 	<div class="container_12 clearfix">
 		<div id="logo" class="grid_12">
 			<!-- replace with your website title or logo -->
-			<a id="site-title">e-Lesson<span> TAMAN AYO PINTAR</span></a>
+			<a id="site-title">e-Lesson<span> ANAK PINTAR</span></a>
 			<a id="view-site" href="../index.php">View Site</a>
 		</div>
 	</div>
