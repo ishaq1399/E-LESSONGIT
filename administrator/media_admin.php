@@ -162,7 +162,7 @@ elseif ($_SESSION[leveluser]=='pengajar'){
 
                             <aside id="sidebar" class="grid_3 pull_9">
                         <div class="box info">
-				<h2>Assalamuallaikum</h2>
+				<h2>Assalamu'alaikum</h2>
 				<section>
                                     <SCRIPT language=JavaScript>var d = new Date();
                                     var h = d.getHours();

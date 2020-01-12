@@ -24,7 +24,7 @@ document.location = delUrl;
    echo "if (document.form_materi.id_kelas.value == \"".$idkelas."\")";
    echo "{";
 
-   // membuat option matapelajaran untuk masing-masing kelas
+   // membuat option mata pelajaran untuk masing-masing kelas
    $query2 = "SELECT * FROM mata_pelajaran WHERE id_kelas = '$idkelas' AND id_pengajar = '0'";
    $hasil2 = mysqli_query($db,$query2);
    $content = "document.getElementById('pelajaran').innerHTML = \"<select name='".id_matapelajaran."'>";
