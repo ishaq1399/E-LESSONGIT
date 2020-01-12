@@ -252,7 +252,7 @@ case "daftarsiswayangtelahmengerjakan":
                                     <br>Nilai Tugas/Quiz Pilihan Ganda : $n2[persentase]</td>";
                           echo "
                           <td><a href=$aksi?module=quiz&act=editsiswayangtelahmengerjakan&id=$t[id]&id_siswa=$s[id_siswa]&id_tq=$_GET[id]>Hapus Siswa</a> |
-                          <a href=?module=quiz&act=koreksi&id=$t[id_tq]&id_siswa=$s[id_siswa]>Koreksi Jawaban Esay</a></td></tr>";
+                          <a href=?module=quiz&act=koreksi&id=$t[id_tq]&id_siswa=$s[id_siswa]&id_session=$t[id]>Koreksi Jawaban Esay</a></td></tr>";
                       }else{
                           echo "<td>Jawaban soal essay <b>sudah di koreksi</b><br>Nilai Tugas/Quiz Pilihan Ganda : $n2[persentase]<br>
                                                          Nilai Tugas/Quiz Essay: $n[nilai]</td>";
@@ -312,7 +312,7 @@ case "daftarsiswayangtelahmengerjakan":
                                     <br>Nilai Tugas/Quiz Pilihan Ganda : $n2[persentase]</td>";
                           echo "
                           <td><a href=$aksi?module=quiz&act=editsiswayangtelahmengerjakan&id=$t[id]&id_siswa=$s[id_siswa]&id_tq=$_GET[id]>Hapus Siswa</a> |
-                          <a href=?module=quiz&act=koreksi&id=$t[id_tq]&id_siswa=$s[id_siswa]>Koreksi Jawaban Esay</a></td></tr>";
+                          <a href=?module=quiz&act=koreksi&id=$t[id_tq]&id_siswa=$s[id_siswa]&id_session=$t[id]>Koreksi Jawaban Esay</a></td></tr>";
                       }else{
                           echo "<td>Jawaban soal essay <b>sudah di koreksi</b><br>Nilai Tugas/Quiz Pilihan Ganda : $n2[persentase]<br>
                                                          Nilai Tugas/Quiz Essay: $n[nilai]</td>";
@@ -323,7 +323,7 @@ case "daftarsiswayangtelahmengerjakan":
             $no++;
         }
         echo "</table>
-              <br><input class='button blue' type=button value=Kembali onclick=self.history.back()>";
+              <br><input class='button blue' type=button value=Kembali onclick=\"window.location.href='?module=quiz';\">";
         }
         elseif (empty($pilganda) AND !empty($esay)){
          echo"<form><fieldset>
@@ -353,7 +353,7 @@ case "daftarsiswayangtelahmengerjakan":
                           echo "<td>Jawaban soal essay <b>belum di koreksi</b></td>";
                           echo "
                           <td><a href=$aksi?module=quiz&act=editsiswayangtelahmengerjakan&id=$t[id]&id_siswa=$s[id_siswa]&id_tq=$_GET[id]>Hapus Siswa</a> |
-                          <a href=?module=quiz&act=koreksi&id=$t[id_tq]&id_siswa=$s[id_siswa]>Koreksi Jawaban Esay</a></td></tr>";
+                          <a href=?module=quiz&act=koreksi&id=$t[id_tq]&id_siswa=$s[id_siswa]&id_session=$t[id]>Koreksi Jawaban Esay</a></td></tr>";
                       }else{
                           echo "<td>Jawaban soal essay <b>sudah di koreksi</b><br>Nilai Tugas/Quiz Essay: $n[nilai]</td>";
                           echo "
@@ -363,7 +363,7 @@ case "daftarsiswayangtelahmengerjakan":
             $no++;
         }
         echo "</table>
-        <br><input class='button blue' type=button value=Kembali onclick=self.history.back()>";
+        <br><input class='button blue' type=button value='Kembali' onclick=self.history.back()>";
         }
         elseif (!empty($pilganda) AND empty($esay)){
          echo "<form><fieldset>
@@ -421,7 +421,7 @@ case "daftarsiswayangtelahmengerjakan":
 
 case "koreksi":
     if ($_SESSION[leveluser]=='admin'){
-        $cek = mysqli_query($db,"SELECT * FROM siswa_sudah_mengerjakan WHERE id_siswa='$_GET[id_siswa]'");
+        $cek = mysqli_query($db,"SELECT * FROM siswa_sudah_mengerjakan WHERE id='$_GET[id_session]'");
         $c = mysqli_fetch_array($cek);
         if ($c[dikoreksi]=='B'){
         $soal_pilganda = mysqli_query($db,"SELECT * FROM quiz_pilganda WHERE id_tq='$_GET[id]'");
@@ -580,8 +580,8 @@ case "koreksi":
          window.location=(href='?module=quiz')</script>";
     }
     }
-    elseif ($_SESSION[leveluser]=='pengajar'){
-        $cek = mysqli_query($db,"SELECT * FROM siswa_sudah_mengerjakan WHERE id_siswa='$_GET[id_siswa]'");
+    elseif ($_SESSION[leveluser]=='pengajar') {
+        $cek = mysqli_query($db,"SELECT * FROM siswa_sudah_mengerjakan WHERE id = '$_GET[id_session]'");
         $c = mysqli_fetch_array($cek);
         if ($c[dikoreksi]=='B'){
         $soal_pilganda = mysqli_query($db,"SELECT * FROM quiz_pilganda WHERE id_tq='$_GET[id]'");
