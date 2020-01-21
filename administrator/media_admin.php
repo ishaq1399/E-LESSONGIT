@@ -26,7 +26,7 @@ else{
 ?>
 <html>
 <head>
-<title>eLesson ANAK PINTAR</title>
+<title>e-Lesson ANAK PINTAR</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/skins/blue.css" title="blue">
 
@@ -67,7 +67,7 @@ else{
 	<div class="container_12 clearfix">
 		<div id="logo" class="grid_5">
 			<!-- replace with your website title or logo -->
-			<a id="site-title" href="#"><span>ADMINISTRATOR</span><br><span>eLesson ANAK PINTAR</span></a>
+			<a id="site-title" href="#"><span>ADMINISTRATOR</span><br><span>e-Lesson ANAK PINTAR</span></a>
 		</div>
 
 		<div class="grid_4" id="colorstyle">
